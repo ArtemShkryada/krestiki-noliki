@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Поймай крота</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="background-music">
+    <audio src="background-music.mp3" autoplay loop></audio>
+  </div>
+  <div id="game-container">
+    <h1>Поймай крота</h1>
+    <div id="game-board">
+      <div class="row">
+        <div class="cell" onclick="catchMole(0, 0)"></div>
+        <div class="cell" onclick="catchMole(0, 1)"></div>
+        <div class="cell" onclick="catchMole(0, 2)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" onclick="catchMole(1, 0)"></div>
+        <div class="cell" onclick="catchMole(1, 1)"></div>
+        <div class="cell" onclick="catchMole(1, 2)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" onclick="catchMole(2, 0)"></div>
+        <div class="cell" onclick="catchMole(2, 1)"></div>
+        <div class="cell" onclick="catchMole(2, 2)"></div>
+      </div>
+    </div>
+    <div id="result">Поймано кротов: <span id="score">0</span></div>
+    <div id="controls">
+      <button onclick="resetGame()">Сбросить игру</button>
+      <button onclick="toggleMusic()">Включить/выключить музыку</button>
+      <button onclick="startGame()">Старт</button>
+      <button onclick="stopGame()">Стоп</button>
+      <span id="timer">00:00</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+#game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#game-board {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #f2f2f2;
+}
+
+.cell img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#result {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+.animated-button {
+  font-size: 18px;
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animated-button:hover {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+}
+
+#music-button {
+  background-color: #4CAF50;
+}
+
+#start-button {
+  background-color: #FF5722;
+}
+
+.animated-timer {
+  font-size: 48px;
+  font-weight: bold;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes countdown {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #f00;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+.animated-timer.running {
+  animation-name: countdown;
+  animation-iteration-count: infinite;
+}
+
+#catch-count {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#catch-count-value {
+  font-weight: bold;
+}
